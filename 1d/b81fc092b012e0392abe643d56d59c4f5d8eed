@@ -1,0 +1,245 @@
+.cta.json
+  s_e0e799adbd593f::t_112dbd14559b58 1-19
+.cursorrules
+  s_e0e799adbd593f::t_9a239f465595de 1-7
+.gitignore
+  s_e0e799adbd593f::t_65f644f916dc4f 1-13
+.vscode/settings.json
+  s_e0e799adbd593f::t_5d6778049ca4de 1-11
+README.md
+  s_e0e799adbd593f::t_ab947bc5dc2179 1-192
+components.json
+  s_e0e799adbd593f::t_5309f6d1517d0a 1-21
+package-lock.json
+  s_e0e799adbd593f::t_54d4582e9ababe 1-5931
+package.json
+  s_360d61337d2646::t_b5a6c75efa31cf 1-52
+pnpm-lock.yaml
+  s_360d61337d2646::t_0e8de71178612b 1-4632
+src/components/calendar/calendar-toolbar.tsx
+  s_c3165f2d3560db::t_83cb001f2cc77a 1-119
+src/components/calendar/month-view.tsx
+  s_360d61337d2646::t_991bb6fd388cb3 1-160
+src/components/calendar/time-grid-view.tsx
+  s_c3165f2d3560db::t_445794f20732db 1-224
+src/components/dashboard/action-items-card.tsx
+  s_af028384990b14::t_532035c8f2e7cf 1-119
+src/components/dashboard/attendee-stack.tsx
+  s_360d61337d2646::t_01d8caa1032963 1-57
+src/components/dashboard/create-meeting-dialog.tsx
+  s_360d61337d2646::t_6092d9efd1cbab 1-419
+src/components/dashboard/instant-meeting-dialog.tsx
+  s_360d61337d2646::t_f5f6144a83f81b 1-118
+src/components/dashboard/meetings-card.tsx
+  s_af028384990b14::t_19a9a8d52462fe 1-398
+src/components/dashboard/quick-start.tsx
+  s_360d61337d2646::t_c07cbb4bd53030 1-112
+src/components/dashboard/up-next-card.tsx
+  s_af028384990b14::t_62b66f1a1c9ba5 1-194
+src/components/meeting/access-section.tsx
+  s_360d61337d2646::t_ee56ff771895de 1-212
+src/components/meeting/agenda-section.tsx
+  s_360d61337d2646::t_f4299f2e0bec18 1-280
+src/components/meeting/date-time-fields.tsx
+  s_360d61337d2646::t_14b4914cbf8963 1-139
+src/components/meeting/details-section.tsx
+  s_360d61337d2646::t_6edbd39f2600fe 1-182
+src/components/meeting/editable-section.tsx
+  s_360d61337d2646::t_a2c109b2a629cd 1-261
+src/components/meeting/invite-dialog.tsx
+  s_360d61337d2646::t_15c97c1bc29e0a 1-166
+src/components/meeting/live-stream-section.tsx
+  s_360d61337d2646::t_57fb1cb7024ec8 1-305
+src/components/meeting/materials-section.tsx
+  s_360d61337d2646::t_243afb44445594 1-246
+src/components/meeting/meeting-header.tsx
+  s_360d61337d2646::t_0f799042fd3024 1-110
+src/components/meeting/meeting-settings.tsx
+  s_360d61337d2646::t_5cf4ad37c04bc0 1-112
+src/components/meeting/overview-tab.tsx
+  s_360d61337d2646::t_b643520c673e3b 1-553
+src/components/meeting/people-section.tsx
+  s_360d61337d2646::t_ae8838db9a5d39 1-262
+src/components/meeting/recording-section.tsx
+  s_360d61337d2646::t_b806307276fae3 1-187
+src/components/meeting/sessions-list.tsx
+  s_360d61337d2646::t_0d70db40da7d3a 1-358
+src/components/meeting/setting-rows.tsx
+  s_360d61337d2646::t_b3b91330ff06a8 1-80
+src/components/meeting/side-cards.tsx
+  s_360d61337d2646::t_215c6a915c9931 1-230
+src/components/meetings/meeting-list.tsx
+  s_360d61337d2646::t_097d0ffe439a42 1-357
+src/components/meetings/now-and-next.tsx
+  s_360d61337d2646::t_9baab308a5e1f8 1-179
+src/components/meetings/share-meeting-button.tsx
+  s_360d61337d2646::t_284f7930897dba 1-122
+src/components/nav-user.tsx
+  s_360d61337d2646::t_b9c2b1f90e7784 1-148
+src/components/session/completed-session-tabs.tsx
+  s_360d61337d2646::t_ee52651aa838bc 1-101
+src/components/session/session-analytics.tsx
+  s_360d61337d2646::t_a2562d3f281466 1-207
+src/components/session/session-attendees.tsx
+  s_360d61337d2646::t_533748c854ddc8 1-212
+src/components/session/session-header.tsx
+  s_360d61337d2646::t_7b8b9acdb6c8ab 1-135
+src/components/session/session-people-section.tsx
+  s_360d61337d2646::t_adf5e2c30da70b 1-398
+src/components/session/session-prep-cards.tsx
+  s_360d61337d2646::t_c69b6fd2d7945d 1-121
+src/components/session/session-recap.tsx
+  s_360d61337d2646::t_58fc24e2911b4e 1-166
+src/components/session/session-time-section.tsx
+  s_360d61337d2646::t_e7612dd964675b 1-125
+src/components/ui/accordion.tsx
+  s_360d61337d2646::t_e05ee0ee9dd422 1-63
+src/components/ui/avatar.tsx
+  s_360d61337d2646::t_2e929e3ecb1ec9 1-108
+src/components/ui/badge.tsx
+  s_360d61337d2646::t_c9978a818448c2 1-47
+src/components/ui/breadcrumb.tsx
+  s_360d61337d2646::t_4684549c5dfba1 1-108
+src/components/ui/button.tsx
+  s_360d61337d2646::t_0ce88857289d52 1-63
+src/components/ui/calendar.tsx
+  s_360d61337d2646::t_d8e8db71a6d165 1-218
+src/components/ui/card.tsx
+  s_360d61337d2646::t_8712d7cbf27225 1-91
+src/components/ui/chart.tsx
+  s_360d61337d2646::t_d360feefbc28e8 1-371
+src/components/ui/checkbox.tsx
+  s_360d61337d2646::t_e515fe7776279b 1-29
+src/components/ui/dialog.tsx
+  s_360d61337d2646::t_4a27368eaa7b3f 1-158
+src/components/ui/dropdown-menu.tsx
+  s_360d61337d2646::t_475c2ca47dcd6d 1-254
+src/components/ui/input.tsx
+  s_360d61337d2646::t_2d0a285eaf3e55 1-20
+src/components/ui/label.tsx
+  s_360d61337d2646::t_c8bf681de8d3c8 1-23
+src/components/ui/popover.tsx
+  s_360d61337d2646::t_5e130020fa64e6 1-88
+src/components/ui/progress.tsx
+  s_360d61337d2646::t_7166f19e56b068 1-28
+src/components/ui/radio-group.tsx
+  s_360d61337d2646::t_e1aff1e6d3b559 1-42
+src/components/ui/scroll-area.tsx
+  s_360d61337d2646::t_3f29c9f91a2a08 1-55
+src/components/ui/select.tsx
+  s_360d61337d2646::t_3b8a9d0753ccfa 1-189
+src/components/ui/separator.tsx
+  s_360d61337d2646::t_d7676b4d471c58 1-25
+src/components/ui/sheet.tsx
+  s_360d61337d2646::t_dec3958cdbd8f4 1-142
+src/components/ui/sidebar.tsx
+  s_360d61337d2646::t_0fd570edade081 1-726
+src/components/ui/skeleton.tsx
+  s_360d61337d2646::t_3ae1fff6c9e253 1-13
+src/components/ui/sonner.tsx
+  s_360d61337d2646::t_d257ccf657ddbc 1-38
+src/components/ui/switch.tsx
+  s_360d61337d2646::t_eb4687ac6a6570 1-32
+src/components/ui/table.tsx
+  s_360d61337d2646::t_1e485ced5ccd11 1-113
+src/components/ui/tabs.tsx
+  s_360d61337d2646::t_c059311b984e2d 1-88
+src/components/ui/textarea.tsx
+  s_360d61337d2646::t_3379a3b95a55a5 1-17
+src/components/ui/tooltip.tsx
+  s_360d61337d2646::t_d3c404caa63361 1-54
+src/hooks/use-mobile.ts
+  s_e0e799adbd593f::t_ef535bf613dbfc 1-19
+src/lib/calendar.ts
+  s_360d61337d2646::t_9a14929ce4eaa9 1-169
+src/lib/demo-dashboard.ts
+  s_360d61337d2646::t_857ecbda1826de 1-586
+src/lib/demo-data.ts
+  s_e0e799adbd593f::t_42153aa2052f5b 1-16
+src/lib/demo-meetings.ts
+  s_360d61337d2646::t_a762dc4bf2944a 1-1496
+src/lib/guests.ts
+  s_360d61337d2646::t_2547ea3ac83cee 1-40
+src/lib/meeting-time.ts
+  s_360d61337d2646::t_6db499e69ee71f 1-62
+src/lib/recurrence.ts
+  s_360d61337d2646::t_49ec5a4ab98b1c 1-98
+src/lib/roles.ts
+  s_360d61337d2646::t_f17f30d6c9d24f 1-43
+src/lib/rule-param.ts
+  s_360d61337d2646::t_ea1ee276408eca 1-68
+src/lib/sessions.ts
+  s_c3165f2d3560db::t_a6a71f75d288a2 1-474
+src/lib/utils.ts
+  s_360d61337d2646::t_f912c89ec5daf3 1-16
+src/routeTree.gen.ts
+  s_360d61337d2646::t_b84f05114fa463 1-225
+src/router.tsx
+  s_e0e799adbd593f::t_9e1414c87087de 1-23
+src/routes/__root.tsx
+  s_e0e799adbd593f::t_84fa29b5dcdf3a 1-57
+src/routes/_app.tsx
+  s_360d61337d2646::t_f6541166a82dd3 1-67
+src/routes/_app/calendar.tsx
+  s_c3165f2d3560db::t_eece01548ce1d2 1-125
+src/routes/_app/dashboard.tsx
+  s_af028384990b14::t_a9115c9d085a37 1-53
+src/routes/_app/meetings/$meetingId/index.tsx
+  s_360d61337d2646::t_b09e00c89d2202 1-220
+src/routes/_app/meetings/$meetingId/sessions/$sessionId.tsx
+  s_360d61337d2646::t_cfea7446450ec8 1-374
+src/routes/_app/meetings/index.tsx
+  s_360d61337d2646::t_49d591df5df00c 1-265
+src/routes/_app/profile.tsx
+  s_e0e799adbd593f::t_28c6642f8b0d8f 1-20
+src/routes/index.tsx
+  s_e0e799adbd593f::t_95cfbbc3939b99 1-7
+src/styles.css
+  s_e0e799adbd593f::t_f92a72bba54890 1-127
+tsconfig.json
+  s_e0e799adbd593f::t_6eb23801a20e9b 1-28
+tsr.config.json
+  s_e0e799adbd593f::t_93db92308b2c9b 1-3
+vite.config.ts
+  s_e0e799adbd593f::t_2484af7f82e71f 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1db81fc092b012e0392abe643d56d59c4f5d8eed",
+  "prompts": {},
+  "sessions": {
+    "s_360d61337d2646": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "db9a7350-76f8-44b6-98e8-43ddcee3ba86",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "rituraj_pathak_code <riturajpathak1998@gmail.com>"
+    },
+    "s_af028384990b14": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "000365e0-efc3-446a-8221-c3c3e6d71584",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "rituraj_pathak_code <riturajpathak1998@gmail.com>"
+    },
+    "s_c3165f2d3560db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fa8fab72-7e7d-46a3-b811-1c4d835c98c0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "rituraj_pathak_code <riturajpathak1998@gmail.com>"
+    },
+    "s_e0e799adbd593f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df832d1c-7024-4fa4-a5b5-4b026e4d3068",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "rituraj_pathak_code <riturajpathak1998@gmail.com>"
+    }
+  }
+}
