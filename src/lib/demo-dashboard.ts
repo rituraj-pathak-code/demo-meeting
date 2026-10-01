@@ -116,7 +116,7 @@ export const DASHBOARD_NOW = {
 
 export const INSTANT_MEETING_LINK = 'https://leapcast.io/j/rtp-vxmn-qda'
 
-const PEOPLE = {
+export const PEOPLE = {
   ananya: { name: 'Ananya Rao', email: 'ananya@leapcast.io' },
   priya: { name: 'Priya Menon', email: 'priya@leapcast.io' },
   marcus: { name: 'Marcus Chen', email: 'marcus@leapcast.io' },

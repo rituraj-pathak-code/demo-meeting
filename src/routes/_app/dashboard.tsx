@@ -1,11 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
 
+import { AiHome } from '@/components/assistant/ai-home'
 import { ActionItemsCard } from '@/components/dashboard/action-items-card'
+import { AiFirstToggle } from '@/components/dashboard/ai-first-toggle'
 import { MeetingsCard } from '@/components/dashboard/meetings-card'
 import { QuickStart } from '@/components/dashboard/quick-start'
 import { UpNextCard } from '@/components/dashboard/up-next-card'
 import { YesterdayRecapCard } from '@/components/dashboard/yesterday-recap-card'
 import { PageHeader } from '@/components/page-header'
+import { useAiFirst } from '@/hooks/use-ai-first'
 import {
   ACTION_ITEMS,
   DASHBOARD_NOW,
@@ -23,6 +26,11 @@ export const Route = createFileRoute('/_app/dashboard')({
 })
 
 function DashboardPage() {
+  const { aiFirst } = useAiFirst()
+  return aiFirst ? <AiHome /> : <ManualDashboard />
+}
+
+function ManualDashboard() {
   const firstName = DEMO_USER.name.split(' ')[0]
 
   return (
@@ -30,6 +38,7 @@ function DashboardPage() {
       <PageHeader
         title={`${DASHBOARD_NOW.greeting}, ${firstName}`}
         description={`${DASHBOARD_NOW.dateLabel} · ${TODAY_SUMMARY.remaining} meetings left today`}
+        actions={<AiFirstToggle />}
       />
 
       <QuickStart />

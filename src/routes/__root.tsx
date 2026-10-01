@@ -5,6 +5,9 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import { themeInitScript } from '@/hooks/use-theme'
 import appCss from '../styles.css?url'
 
+const devtoolsEnabled =
+  import.meta.env.DEV && import.meta.env.VITE_ENABLE_DEVTOOLS === 'true'
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -39,17 +42,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
+        {devtoolsEnabled && (
+          <TanStackDevtools
+            config={{
+              position: 'bottom-right',
+            }}
+            plugins={[
+              {
+                name: 'Tanstack Router',
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+        )}
         <Scripts />
       </body>
     </html>

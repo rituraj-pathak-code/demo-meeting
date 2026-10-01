@@ -1465,6 +1465,16 @@ export type NewMeetingInput = {
   start: number
   end: number
   recurrence: { label: string; rule: RecurrenceRule } | null
+  attendees?: readonly Person[]
+  agenda?: readonly { title: string; owner: string; minutes: number }[]
+  options?: {
+    record: boolean
+    transcript: boolean
+    aiNotes: boolean
+    waitingRoom: boolean
+  }
+  /** Saved but not sent yet: guests aren't invited until you publish. */
+  draft?: boolean
 }
 
 /** A freshly created meeting: only the basics are filled in. */
@@ -1477,6 +1487,9 @@ export function createNewMeeting(input: NewMeetingInput): Meeting {
     role: 'host',
     host: ME,
     code: 'new-mtng-zpl',
+    lifecycle: input.draft
+      ? { status: 'draft', lastEditedAt: NOW }
+      : { status: 'active' },
     recurrence: input.recurrence ? { label: input.recurrence.label } : null,
     details: {
       title: input.title,
@@ -1486,9 +1499,35 @@ export function createNewMeeting(input: NewMeetingInput): Meeting {
       end: input.end,
       location: VIDEO,
     },
-    agenda: [],
+    agenda:
+      input.agenda?.map((item, index) => ({
+        id: `new-agenda-${index + 1}`,
+        ...item,
+      })) ?? [],
     materials: [],
-    guests: [guest('me', 'accepted', 'host')],
+    guests: [
+      guest('me', 'accepted', 'host'),
+      ...(input.attendees?.map((person) => ({
+        ...person,
+        rsvp: 'pending' as const,
+        role: 'participant' as const,
+        isExternal: !person.email.endsWith('@leapcast.io'),
+      })) ?? []),
+    ],
+    recording: input.options
+      ? {
+          record: input.options.record,
+          transcript: input.options.transcript,
+          aiNotes: input.options.aiNotes,
+          summaryTo: 'everyone',
+        }
+      : undefined,
+    access: input.options
+      ? {
+          level: input.options.waitingRoom ? 'trusted' : 'open',
+          passcode: null,
+        }
+      : undefined,
     dates,
     recaps: [],
   })

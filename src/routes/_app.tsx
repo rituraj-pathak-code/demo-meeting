@@ -6,6 +6,8 @@ import {
 } from '@tanstack/react-router'
 
 import { AppSidebar } from '@/components/app-sidebar'
+import { AskAiButton } from '@/components/assistant/ask-ai-button'
+import { AssistantProvider } from '@/components/assistant/assistant-provider'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -36,32 +38,35 @@ function AppLayout() {
 
   return (
     <SidebarProvider>
-      <AppSidebar
-        variant="inset"
-        organizations={DEMO_ORGANIZATIONS}
-        user={DEMO_USER}
-        onSignOut={handleSignOut}
-      />
-      <SidebarInset>
-        <header className="flex h-14 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator
-            orientation="vertical"
-            className="mr-2 data-[orientation=vertical]:h-4"
-          />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 md:p-6">
-          <Outlet />
-        </main>
-      </SidebarInset>
-      <Toaster position="bottom-right" />
+      <AssistantProvider>
+        <AppSidebar
+          variant="inset"
+          organizations={DEMO_ORGANIZATIONS}
+          user={DEMO_USER}
+          onSignOut={handleSignOut}
+        />
+        <SidebarInset>
+          <header className="flex h-14 shrink-0 items-center gap-2 border-b px-4">
+            <SidebarTrigger className="-ml-1" />
+            <Separator
+              orientation="vertical"
+              className="mr-2 data-[orientation=vertical]:h-4"
+            />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            <AskAiButton className="ml-auto" />
+          </header>
+          <main className="flex flex-1 flex-col gap-4 p-4 md:p-6">
+            <Outlet />
+          </main>
+        </SidebarInset>
+        <Toaster position="bottom-right" />
+      </AssistantProvider>
     </SidebarProvider>
   )
 }

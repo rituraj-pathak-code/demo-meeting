@@ -37,6 +37,8 @@ type MeetingSearch = {
   end?: number
   repeat?: string
   rule?: RuleParam
+  /** Opened for editing before it's sent, so it starts as a draft. */
+  draft?: true
 }
 
 function optionalString(value: unknown) {
@@ -63,6 +65,7 @@ export const Route = createFileRoute('/_app/meetings/$meetingId/')({
     end: optionalMinutes(search.end),
     repeat: optionalString(search.repeat),
     rule: parseRuleParam(search.rule),
+    draft: search.draft === true ? true : undefined,
   }),
   beforeLoad: ({ params }) => {
     if (params.meetingId !== 'new' && !getMeeting(params.meetingId)) {
@@ -78,9 +81,16 @@ function MeetingRoute() {
   const { tab, edit, ...basics } = Route.useSearch()
 
   const start = basics.start ?? 10 * 60
+  const hasCreationBasics = Object.values(basics).some(
+    (value) => value !== undefined,
+  )
+  const existingCreatedMeeting = !hasCreationBasics
+    ? getMeeting('new')
+    : undefined
   const meeting =
     meetingId === 'new'
-      ? createNewMeeting({
+      ? (existingCreatedMeeting ??
+        createNewMeeting({
           title: basics.title ?? 'Untitled meeting',
           date: (basics.date && fromDateParam(basics.date)) || new Date(),
           start,
@@ -92,7 +102,8 @@ function MeetingRoute() {
             basics.repeat && basics.rule
               ? { label: basics.repeat, rule: fromRuleParam(basics.rule) }
               : null,
-        })
+          draft: basics.draft,
+        }))
       : getMeeting(meetingId)
 
   if (!meeting) return <MeetingNotFound />
